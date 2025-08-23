@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Explorer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <!-- Explore Vehicles -->
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto mb-6">
+        <h2 class="text-2xl font-semibold text-blue-900 mb-4 font-bold">Explore vehicles</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div
+                class="bg-white border border-gray-200 rounded-md p-4 flex items-center gap-4 border-orange-300 shadow-xl transition duration-200">
+                <i class="fa-solid fa-car-side text-blue-900"></i>
+                <div>
+                    <h3 class="font-semibold text-gray-700">New Cars</h3>
+                    <p class="text-gray-500 text-sm">Find your dream car</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-md p-4 flex items-center gap-4 transition duration-200">
+                <i class="fa-solid fa-car-side text-blue-900"></i>
+                <div>
+                    <h3 class="font-semibold text-gray-700">Car Finance</h3>
+                    <p class="text-gray-500 text-sm">Apply for car finance</p>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-gray-200 rounded-md p-4 flex items-center gap-4 border-orange-300 shadow-xl transition duration-200">
+                <i class="fa-solid fa-car-side text-blue-900"></i>
+                <div>
+                    <h3 class="font-semibold text-gray-700">Mijaega Car Inspection</h3>
+                    <p class="text-gray-500 text-sm">Book your car inspection today</p>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-gray-200 rounded-md p-4 flex items-center gap-4  transition duration-200">
+                <i class="fa-solid fa-car-side text-blue-900"></i>
+                <div>
+                    <h3 class="font-semibold text-gray-700">Blogs</h3>
+                    <p class="text-gray-500 text-sm">Read and write blogs</p>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-gray-200 rounded-md p-4 flex items-center gap-4 border-orange-300 shadow-xl transition duration-200">
+                <i class="fa-solid fa-car-side text-blue-900"></i>
+                <div>
+                    <h3 class="font-semibold text-gray-700">Car Reviews</h3>
+                    <p class="text-gray-500 text-sm">Read reviews on various cars</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-md p-4 flex items-center gap-4 transition duration-200">
+                <i class="fa-solid fa-car-side text-blue-900"></i>
+                <div>
+                    <h3 class="font-semibold text-gray-700">Car Comparison</h3>
+                    <p class="text-gray-500 text-sm">Compare car features</p>
+                </div>
+            </div>
+
+            <div
+                class="bg-white border border-gray-200 rounded-md p-4 flex items-center gap-4 border-orange-300 shadow-xl transition duration-200">
+                <i class="fa-solid fa-car-side text-blue-900"></i>
+                <div>
+                    <h3 class="font-semibold text-gray-700">Batteries</h3>
+                    <p class="text-gray-500 text-sm">Find car batteries</p>
+                </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-md p-4 flex items-center gap-4 transition duration-200">
+                <i class="fa-solid fa-car-side text-blue-900"></i>
+                <div>
+                    <h3 class="font-semibold text-gray-700">Car Tyres</h3>
+                    <p class="text-gray-500 text-sm">Find car Tyres</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Browse by categories -->
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+        <h1 class="text-2xl font-semibold mb-4 text-left text-blue-900 font-bold">Browse by categories</h1>
+        <div class="flex flex-wrap -m-2">
+            <!-- Makes -->
+            <div class="p-2 w-full sm:w-1/2">
+                <h2 class="text-lg font-semibold mb-3 text-blue-900 font-bold">Makes</h2>
+                <div class="p-4 border border-gray-200 rounded-lg h-full">
+
+                    <div class="grid grid-cols-3 gap-2">
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Suzuki</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Toyota</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Honda</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Nissan</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Mercedes</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">BMW</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Audi</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">FAW</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Isuzu</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Daewoo</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Changan</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Mitsubishi</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model -->
+            <div class="p-2 w-full sm:w-1/2">
+                <h2 class="text-lg font-semibold mb-3 text-blue-900 font-bold">Model</h2>
+                <div class="p-4 border border-gray-200 rounded-lg h-full">
+
+                    <div class="grid grid-cols-3 gap-2">
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Alto</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Cultus</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Mehran</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Corolla</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Bolan</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">City</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Civic</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Vitz</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Swift</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Wagon
+                            R</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Prado</button>
+                        <button
+                            class="px-2 py-1 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Aqua</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- City -->
+            <div class="p-2 w-full sm:w-1/2">
+                <h2 class="text-lg font-semibold mb-3 text-blue-900 font-bold">City</h2>
+                <div class="p-4 border border-gray-200 rounded-lg h-full">
+
+                    <div class="grid grid-cols-3 gap-2">
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Karachi</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Lahore</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Islamabad</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Faisalabad</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Multan</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Peshawar</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Sialkot</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Hyderabad</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Quetta</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Gujrat</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Abbotabad</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl">Sukkur</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price Range -->
+            <div class="p-2 w-full sm:w-1/2">
+                <h2 class="text-lg font-semibold mb-3 text-blue-900 font-bold">Price Range</h2>
+                <div class="p-4 border border-gray-200 rounded-lg h-full">
+
+                    <div class="grid grid-cols-2 gap-1 justify-items-center">
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 w-[130px]">Under
+                            2 Lakh</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 w-[130px]">Under
+                            10 Lakh</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 w-[130px]">Under
+                            6 Lakh</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 w-[130px]">Under
+                            15 Lakh</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 w-[130px]">Under
+                            5 Lakh</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 w-[130px]">Under
+                            20 Lakh</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 w-[130px]">Under
+                            8 Lakh</button>
+                        <button
+                            class="px-2 py-2 border border-gray-300 rounded-lg text-sm text-center hover:bg-gray-100 border-orange-300 shadow-xl w-[130px]">Under
+                            25 Lakh</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
