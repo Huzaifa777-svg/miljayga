@@ -12,34 +12,34 @@
 
     <div class="max-w-xl w-full bg-white p-6 shadow-md rounded-md space-y-5">
         <div>
-            <p class="font-semibold">Purpose:
-                <span class="font-normal text-gray-400 ml-2 text-base">Highlight ads for increased visibility</span>
+            <p class="font-bold ">Purpose:
+                <span class="font-normal text-gray-500 ml-2 text-sm">Highlight ads for increased visibility</span>
             </p>
         </div>
 
         <!-- Ad Title -->
         <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-            <label class="sm:w-32 text-sm font-semibold">Ad Title*</label>
+            <label class="sm:w-32 text-sm font-bold">Ad Title*</label>
             <input type="text" placeholder="(if ad is already posted).." required
                 class="shadow-md flex-1 border rounded px-3 py-2 text-sm outline-none w-full" />
         </div>
 
         <!-- Ad ID -->
         <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-            <label class="sm:w-32 text-sm font-semibold">Ad ID*</label>
+            <label class="sm:w-32 text-sm font-bold">Ad ID*</label>
             <input type="text" placeholder="e.g., #MIL12345" required
                 class="shadow-md flex-1 border rounded px-3 py-2 text-sm outline-none w-full" />
         </div>
 
         <!-- Duration -->
         <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-            <label class="sm:w-32 text-sm font-semibold">Duration*</label>
+            <label class="sm:w-32 text-sm font-bold ">Duration*</label>
             <div class="relative w-full sm:w-64">
                 <!-- Dropdown Button -->
                 <button onclick="toggleDropdown()"
-                    class="w-full border border-gray-300 rounded-md px-4 py-2 text-left bg-white flex justify-between items-center">
+                    class="w-full border border-gray-300 rounded-md px-4 py-2 text-left bg-white flex justify-between items-center text-sm text-gray-400">
                     Select Duration
-                    <svg class="w-4 h-4 transform transition-transform duration-200" id="arrow"
+                    <svg class="w-4 h-4 transform transition-transform duration-200 text-blue-900" id="arrow"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
@@ -49,21 +49,22 @@
                 <div id="dropdown"
                     class="hidden absolute mt-2 w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
                     <label
-                        class="flex items-center border-b border-gray-200 px-4 py-3 hover:bg-gray-100 cursor-pointer">
-                        <input type="checkbox" class="mr-3" />
+                        class="flex items-center hover:bg-blue-100 border-b border-gray-300 px-4 py-3 cursor-pointer">
+                        <input type="checkbox" class="mr-3 " />
                         1 Day
                     </label>
                     <label
-                        class="flex items-center border-b border-gray-200 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                        class="flex items-center hover:bg-blue-100 border-b border-gray-300 px-4 py-3  cursor-pointer">
                         <input type="checkbox" class="mr-3" />
                         3 Days
                     </label>
                     <label
-                        class="flex items-center border-b border-gray-200 px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                        class="flex items-center hover:bg-blue-100 border-b border-gray-300 px-4 py-3 cursor-pointer">
                         <input type="checkbox" class="mr-3" />
                         7 Days
                     </label>
-                    <label class="flex items-center px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                    <label
+                        class="flex items-center hover:bg-blue-100 border-b border-gray-300 px-4 py-3  cursor-pointer">
                         <input type="checkbox" class="mr-3" />
                         Custom Range
                     </label>
@@ -73,21 +74,23 @@
 
         <!-- Payment Method -->
         <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-            <label class="sm:w-32 text-sm font-bold">Payment Method*</label>
+            <label class="sm:w-32 text-sm font-bold ">Payment Method*</label>
             <div class="flex-1 flex flex-wrap gap-4">
-                <label><input type="radio" name="payment" class="mr-1" checked> JazzCash</label>
-                <label><input type="radio" name="payment" class="mr-1"> EasyPaisa</label>
-                <label><input type="radio" name="payment" class="mr-1"> Credit Card</label>
+                <label class="text-gray-600"><input type="radio" name="payment" class="mr-1" checked> JazzCash</label>
+                <label class="text-gray-600"><input type="radio" name="payment" class="mr-1"> EasyPaisa</label>
+                <label class="text-gray-600"><input type="radio" name="payment" class="mr-1"> Credit Card</label>
             </div>
         </div>
 
         <!-- Terms -->
         <div>
-            <label class="inline-flex items-start text-sm">
+            <label class="flex-col items-start text-sm">
                 <input type="checkbox" class="mr-2 mt-1" checked>
-                <span class="font-bold">Terms & Conditions :<br />
-                    <span class="ml-6 font-normal">I agree to Miljaega’s Featured Ad terms</span>
+                <span class="font-bold text-md text-blue-900 ">Terms & Conditions :<br />
+
                 </span>
+
+                <span class="font-normal ml-7">I agree to Miljaega’s Featured Ad terms</span>
             </label>
         </div>
 

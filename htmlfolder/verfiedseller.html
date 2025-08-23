@@ -12,7 +12,7 @@
 
     <div class="bg-white p-6 sm:p-10 rounded-lg shadow-lg shadow-gray-400 w-full max-w-2xl">
 
-        <p class="font-semibold text-left text-lg sm:text-xl">Title: <span class="font-normal ml-6 text-[20px]">"Verify
+        <p class="font-bold text-left text-md text-gray-700">Title: <span class="font-normal ml-6 text-[14px]">"Verify
                 Your
                 Identity"</span></p>
 
@@ -20,7 +20,7 @@
 
             <!-- Full Name -->
             <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                <label for="fullName" class="sm:w-48 text-gray-700 font-bold">
+                <label for="fullName" class="sm:w-48 text-gray-700 font-bold text-md">
                     Full Name <span class="text-black-500">*</span>
                 </label>
                 <input type="text" id="fullName" name="fullName" placeholder="e.g. Ali Ahmed"
@@ -30,7 +30,7 @@
 
             <!-- CNIC -->
             <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                <label for="cnicNumber" class="sm:w-48 text-gray-700 font-bold">
+                <label for="cnicNumber" class="sm:w-48 text-gray-700 font-bold text-md">
                     CNIC/Number <span class="text-black-500">*</span>
                 </label>
                 <input type="text" id="cnicNumber" name="cnicNumber" placeholder="e.g. 12345-6789012-3"
@@ -41,12 +41,12 @@
             <!-- Upload Government ID -->
             <div>
                 <div class="flex justify-between items-center mb-1">
-                    <label class="block text-gray-700 font-bold">
+                    <label class="block text-gray-700 font-bold text-md">
                         Upload Government ID <span class="text-black-500">*</span>
                     </label>
-                    <a href="#" class="text-red-500 font-normal hover:underline">Upload</a>
+                    <a href="#" class="text-red-500 font-normal text-sm hover:underline">Upload</a>
                 </div>
-                <p class="text-sm text-green-500 sm:pl-24">
+                <p class=" text-green-500 sm:pl-24 text-sm">
                     File upload
                     <span class="text-gray-700 font-normal">
                         (front/back of ID, max 2MB)
@@ -56,22 +56,22 @@
 
             <!-- Phone -->
             <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                <label for="phoneNumber" class="sm:w-48 text-gray-700 font-bold">
+                <label for="phoneNumber" class="sm:w-48 text-gray-700 font-bold text-md">
                     Phone Number <span class="text-black-500">*</span>
                 </label>
                 <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g. +92 300 1234567"
-                    class="w-full h-[44px] px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg"
+                    class="w-full text-smh-[44px] px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg"
                     required>
             </div>
 
             <!-- Email -->
             <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-                <label for="emailAddress" class="sm:w-48 text-gray-700 font-bold">
+                <label for="emailAddress" class="sm:w-48 text-gray-700 font-bold text-md">
                     Email Address <span class="text-black-500">*</span>
                 </label>
                 <div class="w-full">
                     <input type="email" id="emailAddress" name="emailAddress" placeholder="example@mail.com"
-                        class="w-full h-[44px] border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg"
+                        class="w-full  text-sm h-[44px] border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg"
                         required>
                     <p class="text-xs text-gray-500 mt-1">Must be a valid email format</p>
                 </div>
@@ -79,12 +79,13 @@
 
             <!-- Social Media -->
             <div class="space-y-4">
-                <p class="block text-lg font-semibold text-left">Social Media <span class="text-black-500">*</span></p>
+                <p class="block text-md text-gray-700 font-bold text-left">Social Media <span
+                        class="text-black-500">*</span></p>
 
                 <!-- LinkedIn Field -->
                 <div class="flex flex-col">
                     <div class="flex justify-between items-center mb-1">
-                        <label class="ml-9 text-sm font-medium text-blue-700">LinkedIn</label>
+                        <label class="ml-[65px] text-sm font-medium text-blue-900">LinkedIn</label>
                         <button type="button" class="text-sm text-red-600 font-normal hover:underline">Add</button>
                     </div>
                     <input type="text" placeholder="linkedin.com/in/ali-ahmed"
@@ -94,7 +95,7 @@
                 <!-- Facebook Field -->
                 <div class="flex flex-col">
                     <div class="flex justify-between items-center mb-1">
-                        <label class="ml-9 text-sm font-medium text-blue-700">Facebook</label>
+                        <label class="ml-[65px] text-sm font-medium text-blue-900">Facebook</label>
                     </div>
                     <input type="text" placeholder="facebook.com/ali.ahmed"
                         class="ml-[90px] sm:w-[500px] border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-lg" />
@@ -103,7 +104,7 @@
 
             <!-- Consent -->
             <div class="flex items-start pt-2">
-                <input type="checkbox" id="consent" name="consent" class="h-5 w-5 text-blue-600 rounded mt-1 mr-3"
+                <input type="checkbox" id="consent" name="consent" class="h-4 w-4 text-blue-600 rounded mt-1 mr-3"
                     required>
                 <div>
                     <label for="consent" class="text-gray-700 font-bold">Consent</label>
@@ -114,7 +115,7 @@
             <!-- Submit Button -->
             <div class="pt-2 text-right">
                 <button type="submit"
-                    class="bg-blue-900 text-white font-bold py-3 px-6 w-full sm:w-auto hover:bg-blue-800 transition-colors">
+                    class="bg-blue-900 text-white font-bold py-3 rounded-[7px] px-6 w-full sm:w-auto hover:bg-blue-800 transition-colors">
                     Submit
                 </button>
             </div>

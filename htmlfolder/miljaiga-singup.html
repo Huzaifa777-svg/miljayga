@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miljaega - Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+
+<body class="bg-white flex flex-col items-center p-0 m-0">
+
+    <!-- Navbar -->
+
+    <!-- Logo below Navbar -->
+    <div class="flex justify-center mt-4 mb-8">
+        <img src="Assest/images/thumb-500x100-logo-676ff57679e7b 1.svg" alt="Logo" class="h-12">
+    </div>
+
+    <!-- Form Container -->
+    <div class="bg-white p-6 sm:p-12 rounded-lg shadow-xl w-full max-w-3xl border-4 border-gray-200">
+        <!-- Form Heading -->
+        <h2 class="text-2xl font-bold mb-6 text-gray-800 text-left">SIGNUP</h2>
+
+        <form class="space-y-5 sm:space-y-6">
+            <!-- Name Fields -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div>
+                    <label for="full-name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name*</label>
+                    <div class="relative">
+                        <input type="text" id="full-name" name="full-name" placeholder="Full Name" required
+                            class="w-full pl-3 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <!-- Right icon -->
+                        <img src="Assest/images/wpf_name (1).svg" alt="icon"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="last-name" class="block text-sm font-semibold text-gray-700 mb-2">Last Name*</label>
+                    <div class="relative">
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required
+                            class="w-full pl-3 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <img src="Assest/images/wpf_name (1).svg" alt="icon"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email and Contact -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div>
+                    <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email*</label>
+                    <div class="relative">
+                        <input type="email" id="email" name="email" required placeholder="abc@gmail.com"
+                            class="w-full pl-3 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <img src="Assest/images/Vector (1).svg" alt="icon"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5">
+                    </div>
+                </div>
+
+                <div class="phone-input-container">
+                    <label for="contact-number" class="block text-sm font-semibold text-gray-700 mb-2">Contact
+                        Number*</label>
+                    <div class="relative flex items-center">
+                        <div
+                            class="flex items-center bg-gray-100 border border-gray-300 rounded-l-lg py-3 px-3 text-gray-600 font-medium">
+                            +92
+                        </div>
+                        <input type="tel" id="contact-number" required name="contact-number"
+                            placeholder="Enter Phone Number"
+                            class="w-full pl-3 pr-10 py-3 border border-gray-300 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <img src="Assest/images/material-symbols_call.svg" alt="icon"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Password Fields -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div>
+                    <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">Password*</label>
+                    <div class="relative">
+                        <input type="password" id="password" name="password" placeholder="*****" required
+                            class="w-full pl-3 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <img src="Assest/images/closeeye.png" alt="eye icon"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 cursor-pointer"
+                            onclick="togglePassword('password', this)">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="confirm-password" class="block text-sm font-semibold text-gray-700 mb-2">Confirm
+                        Password*</label>
+                    <div class="relative">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="*****"
+                            required
+                            class="w-full pl-3 pr-10 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <img src="Assest/images/closeeye.png" alt="eye icon"
+                            class="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 cursor-pointer"
+                            onclick="togglePassword('confirm-password', this)">
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function togglePassword(fieldId, icon) {
+                    const input = document.getElementById(fieldId);
+                    if (input.type === "password") {
+                        input.type = "text";
+                        icon.src = "openeyeimage.png";
+                        // open eye icon
+                        icon.classList.add("w-[25px]");
+                    } else {
+                        input.type = "password";
+                        icon.src = "Assest/images/closeeye.png"; // closed eye icon
+
+                        icon.classList.add("w-[25px]");
+                    }
+                }
+            </script>
+
+
+            <!-- Submit Button -->
+            <div class="flex justify-center pt-4">
+                <button type="submit"
+                    class="bg-blue-900 text-white font-semibold py-3 px-12 rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
