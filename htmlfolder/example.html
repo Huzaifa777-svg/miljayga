@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Selector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-4 sm:p-8 flex justify-center items-start min-h-screen">
+
+    <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 w-full max-w-lg">
+
+        <!-- Tabs -->
+        <div class="flex border-b border-gray-200 mb-6 text-center flex-wrap">
+            <button
+                class="flex-1 py-2 sm:py-3 text-gray-900 font-semibold border-b-2 border-blue-600 focus:outline-none"
+                data-tab="residential">
+                Residential
+            </button>
+            <button class="flex-1 py-2 sm:py-3 text-gray-500 font-semibold hover:text-gray-900 focus:outline-none"
+                data-tab="plot">
+                Plot
+            </button>
+            <button class="flex-1 py-2 sm:py-3 text-gray-500 font-semibold hover:text-gray-900 focus:outline-none"
+                data-tab="commercial">
+                Commercial
+            </button>
+        </div>
+
+        <!-- Residential Content -->
+        <div id="residential-content" class="hidden">
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/All_Symbol.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">All</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/office.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Home</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/shop.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Flat</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/warehouse.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Lower Portion</span>
+                </div>
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/building.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Upper Portion</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/bed.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Room</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/plaza.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Farm House</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/theatre.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Pent House</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/gym.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Annexe</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/factory.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Hostel</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/theatre.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Hostel Suites</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/office.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Basement</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plot Content -->
+        <div id="plot-content" class="hidden">
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/All_Symbol.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">All</span>
+                </div>
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/office.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Residential Plot</span>
+                </div>
+            </div>
+
+            <div class="flex gap-2 sm:gap-3 mt-3 px-1 sm:px-2 flex-wrap">
+                <div class="flex items-center gap-2 px-2 border-2 border-gray-200 rounded-lg p-1">
+                    <img src="../Assest/images/shop.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Commercial Plot</span>
+                </div>
+                <div class="flex items-center gap-2 px-2 border-2 border-gray-200 rounded-lg p-1">
+                    <img src="../Assest/images/warehouse.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Agricultural Plot</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/plaza.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Plot File</span>
+                </div>
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/bed.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Industrial Land</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/plaza.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Farmhouse Plot</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Commercial Content -->
+        <div id="commercial-content">
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/All_Symbol.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">All</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/office.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Office</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/shop.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Shop</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/warehouse.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Warehouse</span>
+                </div>
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/building.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Building</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/bed.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Hall</span>
+                </div>
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/plaza.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Plaza</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/gym.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Gym</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/theatre.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Theatre</span>
+                </div>
+                <div class="flex gap-2 px-3 sm:px-[15px] border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/land.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Land</span>
+                </div>
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/food_court.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Food Court</span>
+                </div>
+            </div>
+
+            <div class="px-1 sm:px-2 gap-2 sm:gap-3 flex flex-wrap mt-3">
+                <div class="flex gap-2 px-2 border-2 border-gray-200 rounded-lg p-1 items-center">
+                    <img src="../Assest/images/food.svg" alt="" class="w-5 h-5 sm:w-6 sm:h-6">
+                    <span class="text-sm sm:text-base">Factory</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Apply / Cancel Buttons -->
+        <div class="flex justify-end mt-8 gap-2 sm:gap-4 flex-wrap">
+            <button class="px-6 py-2 text-gray-500 font-semibold rounded-lg">
+                CANCEL
+            </button>
+            <button class="px-6 py-2 bg-blue-900 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md">
+                APPLY
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('[data-tab]');
+            const contentDivs = {
+                'residential': document.getElementById('residential-content'),
+                'plot': document.getElementById('plot-content'),
+                'commercial': document.getElementById('commercial-content')
+            };
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabName = tab.dataset.tab;
+
+                    // Deactivate all tabs
+                    tabs.forEach(t => {
+                        t.classList.remove('text-gray-900', 'border-b-2', 'border-blue-600');
+                        t.classList.add('text-gray-500');
+                    });
+
+                    // Hide all content divs
+                    Object.values(contentDivs).forEach(div => div.classList.add('hidden'));
+
+                    // Activate the clicked tab
+                    tab.classList.remove('text-gray-500');
+                    tab.classList.add('text-gray-900', 'border-b-2', 'border-blue-600');
+
+                    // Show corresponding content
+                    contentDivs[tabName].classList.remove('hidden');
+                });
+            });
+
+            // Initially show commercial content
+            contentDivs['commercial'].classList.remove('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
