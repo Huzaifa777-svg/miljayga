@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Steps</title>
+</head>
+
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <style>
+        .btn {
+            position: relative;
+            padding: 15px 40px;
+            background-color: rgb(133, 115, 115);
+            color: #222;
+            font-weight: 500;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            transition: .4s;
+            cursor: pointer;
+
+            /* arrow shape */
+            clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%, 0% 0%);
+
+            /* base border */
+            border: 2px solid black;
+            z-index: 1;
+        }
+
+        .btn:hover {
+            background-color: #c82145;
+            color: white;
+            letter-spacing: 4px;
+        }
+
+        /* attach buttons together */
+        .btn:not(:first-child) {
+            margin-left: -25px;
+        }
+
+        /* ensure right side border is always visible */
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 25px;
+            /* arrow ka hissa */
+            clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+            border-right: 2px solid black;
+            z-index: 2;
+        }
+    </style>
+
+    <div class="flex">
+        <button class="btn ">Step 1</button>
+        <button class="btn" style="background-color: blue;">Step 2</button>
+        <button class="btn" style="background-color: white;">Step 3</button>
+        <button class="btn" style="background-color:gray">Step 4</button>
+    </div>
+</body>
+
+</html>

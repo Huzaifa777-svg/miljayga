@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Ad Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Your custom CSS for buttons, sliders, and toggle switches remains here. */
+        /* You can move these styles to a separate CSS file for better practice. */
+
+        /* ==== Range Slider Styling ==== */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #2563EB;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #2563EB;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #2563EB;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #2563EB;
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            background: transparent;
+            height: 4px;
+        }
+
+        input[type="range"]::-moz-range-track {
+            background: transparent;
+            height: 4px;
+        }
+
+        .range-container {
+            width: 100%;
+            margin: 50px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+        }
+
+        .slider input[type=range] {
+            position: absolute;
+            left: 0;
+            top: -10px;
+            width: 100%;
+            -webkit-appearance: none;
+            background: none;
+        }
+
+        .slider-track {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 4px;
+            background: #D1D5DB;
+            width: 100%;
+            border-radius: 2px;
+        }
+
+        .range-highlight {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 4px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 2px;
+        }
+
+        .values {
+            margin-top: 50px;
+            font-size: 16px;
+        }
+
+        /* ==== Toggle Switch ==== */
+        .toggle-switch-input:checked+.toggle-switch-label {
+            background-color: #2563EB;
+        }
+
+        .toggle-switch-input:checked+.toggle-switch-label .toggle-switch-ball {
+            transform: translateX(20px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-4 sm:p-8 font-sans flex flex-col items-center">
+
+    <div class="flex flex-col lg:flex-row gap-8 w-full max-w-6xl">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-full lg:w-2/3">
+
+            <div class="mb-6">
+                <label class="block text-gray-700 font-medium mb-2">Category</label>
+                <div class="relative w-full max-w-full">
+                    <input type="text" value="Cars" placeholder="Select Category" readonly
+                        class="flex items-center justify-between p-4 bg-white border border-gray-300 rounded-lg shadow-sm cursor-pointer w-full pr-12" />
+                    <img src="../Assest/images/hand.svg" alt="Hand Icon"
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2" />
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-gray-700 font-medium mb-2">Upload Images*</label>
+                <div class="flex flex-wrap gap-4 items-center">
+                    <label for="file-upload" class="cursor-pointer">
+                        <div
+                            class="w-20 h-20 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-400 text-3xl hover:border-blue-500 hover:text-blue-500 transition-colors">
+                            +
+                        </div>
+                        <input id="file-upload" type="file" class="hidden" multiple accept="image/*">
+                    </label>
+
+                    <div class="relative w-20 h-20">
+                        <div
+                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
+                            <i class="fa-solid fa-camera text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="relative w-20 h-20">
+                        <div
+                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
+                            <i class="fa-solid fa-camera text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="relative w-20 h-20">
+                        <div
+                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
+                            <i class="fa-solid fa-camera text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="relative w-20 h-20">
+                        <div
+                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
+                            <i class="fa-solid fa-camera text-xl"></i>
+                        </div>
+                    </div>
+                    <div class="relative w-20 h-20">
+                        <div
+                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
+                            <i class="fa-solid fa-camera text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">For the cover picture we recommend using the landscape mode</p>
+            </div>
+
+
+            <hr class="my-6 border-gray-300">
+
+            <form class="space-y-6">
+
+                <div>
+                    <label for="brands" class="block text-gray-700 font-medium mb-2">Brands*</label>
+                    <div class="relative">
+                        <div
+                            class="flex items-center w-full py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white cursor-pointer">
+                            <i class="fa-solid fa-chevron-down text-gray-400 mr-2"></i>
+                            <select id="brands" class="w-full focus:outline-none bg-white appearance-none">
+                                <option disabled selected>Select brand</option>
+                                <option>Toyota</option>
+                                <option>Honda</option>
+                                <option>Suzuki</option>
+                                <option>Hyundai</option>
+                                <option>Kia</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="condition" class="block text-gray-700 font-medium mb-2">Condition*</label>
+                    <div class="relative">
+                        <div
+                            class="flex items-center w-full py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white cursor-pointer">
+                            <i class="fa-solid fa-chevron-down text-gray-400 mr-2"></i>
+                            <select id="condition" class="w-full focus:outline-none bg-white appearance-none">
+                                <option disabled selected>Select condition</option>
+                                <option>New</option>
+                                <option>Used</option>
+                                <option>Refurbished</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-6 border-gray-300">
+
+                <div>
+                    <label for="ad-title" class="block text-gray-700 font-medium mb-2">Ad title*</label>
+                    <input type="text" id="ad-title"
+                        class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Maintain the key features of your item (e.g. brand, model, age, type)">
+                    <p class="text-sm text-gray-500 mt-1">Mention the key features of your item (e.g. brand, model, age,
+                        type)</p>
+                </div>
+
+                <div>
+                    <label for="description" class="block text-gray-700 font-medium mb-2">Description*</label>
+                    <textarea id="description" rows="4"
+                        class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Describe the item you're selling"></textarea>
+                    <p class="text-sm text-gray-500 mt-1">Description should contain at least 10 alphabets/characters,
+                        please add less than 2400 characters</p>
+                </div>
+
+                <div>
+                    <label for="location" class="block text-gray-700 font-medium mb-2">Location*</label>
+                    <div class="relative">
+                        <div
+                            class="flex items-center w-full py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white cursor-pointer">
+                            <i class="fa-solid fa-chevron-down text-gray-400 mr-2"></i>
+                            <select id="location" class="w-full focus:outline-none bg-white appearance-none">
+                                <option disabled selected>Select Location</option>
+                                <option>Karachi</option>
+                                <option>Lahore</option>
+                                <option>Islamabad</option>
+                                <option>Rawalpindi</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-6 border-gray-300">
+
+                <div>
+                    <label for="price" class="block text-gray-700 font-medium mb-2">Price*</label>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <input type="text" placeholder="RS | Enter Price"
+                            class="w-full p-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="range-container">
+                        <div class="slider">
+                            <div class="slider-track"></div>
+                            <div class="range-highlight" id="rangeHighlight"></div>
+                            <input type="range" id="minRange" min="0" max="10000" step="100" value="2000">
+                            <input type="range" id="maxRange" min="0" max="10000" step="100" value="8000">
+                        </div>
+                        <div class="values flex justify-between px-2">
+                            <span id="minVal">2000</span>
+                            <span id="maxVal">8000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-6 border-gray-300">
+
+                <div>
+                    <label for="name" class="block text-gray-700 font-medium mb-2">Name*</label>
+                    <input type="text" id="name"
+                        class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Name">
+                </div>
+
+                <div>
+                    <label for="phone-number" class="block text-gray-700 font-medium mb-2">Phone Number*</label>
+                    <input type="text" id="phone-number"
+                        class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="92 | Enter Phone Number">
+                    <div class="flex justify-between items-center mt-6">
+                        <span class="text-gray-700 text-sm">Show my Phone number in ads.</span>
+                        <label for="toggle-switch" class="relative inline-block w-10 h-6">
+                            <input type="checkbox" id="toggle-switch" class="hidden peer toggle-switch-input">
+                            <span
+                                class="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition-colors duration-300 peer-checked:bg-blue-800 toggle-switch-label">
+                                <span
+                                    class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-300 peer-checked:translate-x-4 toggle-switch-ball">
+                                </span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="flex items-center space-x-2 mt-4">
+                        <input type="checkbox" id="installment-available" name="installment-available"
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500">
+                        <label for="installment-available" class="text-gray-700">Installment Available</label>
+                    </div>
+                </div>
+
+                <hr class="my-6 border-gray-300">
+
+                <div
+                    class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
+                    <div class="flex flex-wrap justify-center sm:justify-start gap-4">
+                        <div class="flex items-center flex-col text-center">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mb-1">
+                                <img src="../Assest/images/verfieds.svg" alt="">
+                            </div>
+                            <span class="text-xs text-gray-600">Verified</span>
+                        </div>
+                        <div class="flex items-center flex-col text-center">
+                            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mb-1">
+                                <img src="../Assest/images/inspected.svg" alt="">
+                            </div>
+                            <span class="text-xs text-gray-600">Inspected</span>
+                        </div>
+                        <div class="flex items-center flex-col text-center">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mb-1">
+                                <img src="../Assest/images/trusted.svg" alt="">
+                            </div>
+                            <span class="text-xs text-gray-600">Trusted</span>
+                        </div>
+                        <div class="flex items-center flex-col text-center">
+                            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-1">
+                                <img src="../Assest/images/featured.svg" alt="">
+                            </div>
+                            <span class="text-xs text-gray-600">Featured</span>
+                        </div>
+                    </div>
+                    <button type="submit"
+                        class="bg-blue-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-colors w-full sm:w-auto mt-4 sm:mt-0">Post
+                        Now</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="w-full lg:w-1/3">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Need help getting started?</h3>
+                <p class="text-gray-600 mb-4">
+                    Review these resources to learn how to create a great ad and increase your selling chances
+                </p>
+                <ul class="list-none space-y-2 mb-4">
+                    <li class="flex items-start">
+                        <span class="text-gray-600 mr-2 mt-1">•</span>
+                        <p class="text-gray-600">Tips for improving your ads and your chances of selling</p>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-gray-600 mr-2 mt-1">•</span>
+                        <p class="text-gray-600">All you need to know about Posting Ads</p>
+                    </li>
+                </ul>
+                <p class="text-gray-600">
+                    You can always come back to change your ad
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const minRange = document.getElementById("minRange");
+        const maxRange = document.getElementById("maxRange");
+        const minVal = document.getElementById("minVal");
+        const maxVal = document.getElementById("maxVal");
+        const rangeHighlight = document.getElementById("rangeHighlight");
+
+        function updateRange() {
+            let min = parseInt(minRange.value);
+            let max = parseInt(maxRange.value);
+
+            if (min > max - 500) {
+                minRange.value = max - 500;
+                min = max - 500;
+            }
+            if (max < min + 500) {
+                maxRange.value = min + 500;
+                max = min + 500;
+            }
+
+            minVal.textContent = min;
+            maxVal.textContent = max;
+
+            const range = parseInt(minRange.max) - parseInt(minRange.min);
+            const minPercent = ((min - minRange.min) / range) * 100;
+            const maxPercent = ((max - minRange.min) / range) * 100;
+
+            rangeHighlight.style.left = minPercent + "%";
+            rangeHighlight.style.width = (maxPercent - minPercent) + "%";
+        }
+
+        minRange.addEventListener("input", updateRange);
+        maxRange.addEventListener("input", updateRange);
+
+        updateRange();
+    </script>
+</body>
+
+</html>
