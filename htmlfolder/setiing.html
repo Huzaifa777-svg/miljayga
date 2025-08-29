@@ -197,7 +197,7 @@
                             <div class="mb-4">
                                 <label for="new-password" class="block font-semibold mb-1">New Password</label>
                                 <input type="password" id="new-password" name="new-password"
-                                    class="w-full p-2 border rounded-md focus:ring focus:ring-blue-200">
+                                    class="w-full p-2 border rounded-md focus:ring focus:ring-blue-200" required>
                                 <small class="text-gray-500 text-sm">Use at least 8 characters with 1 number, 1 special
                                     character, 1 letter</small>
                             </div>
@@ -205,7 +205,7 @@
                                 <label for="confirm-password" class="block font-semibold mb-1">Confirm new
                                     password</label>
                                 <input type="password" id="confirm-password" name="confirm-password"
-                                    class="w-full p-2 border rounded-md focus:ring focus:ring-blue-200">
+                                    class="w-full p-2 border rounded-md focus:ring focus:ring-blue-200" required>
                             </div>
                             <button type="submit"
                                 class="bg-blue-900 text-white px-5 py-2 rounded-md hover:bg-blue-800">Create
@@ -341,28 +341,8 @@
             notificationSection.classList.remove('hidden');
         });
 
-        // Password form handling
-        passwordForm.addEventListener('submit', (e) => {
-            e.preventDefault();
 
-            const newPassword = newPasswordInput.value;
-            const confirmPassword = confirmPasswordInput.value;
 
-            // Password strength validation
-            const hasNumber = /\d/.test(newPassword);
-            const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(newPassword);
-            const hasLetter = /[a-zA-Z]/.test(newPassword);
-
-            if (newPassword === confirmPassword && newPassword.length >= 8 && hasNumber && hasSpecialChar && hasLetter) {
-                alert('Password created successfully! ✅');
-                newPasswordInput.value = '';
-                confirmPasswordInput.value = '';
-            } else if (newPassword !== confirmPassword) {
-                alert('Error: Passwords do not match ❌');
-            } else {
-                alert('Error: Password must be at least 8 characters and include 1 number, 1 special character, and 1 letter ❌');
-            }
-        });
     </script>
 </body>
 

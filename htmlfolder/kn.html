@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./Css/miljaega-homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="bg-white shadow-sm fixed top-0 z-50 w-full">
+        <div class="lg:mx-auto 2xl:mx-20 container px-4 sm:px-6">
+            <div class="flex justify-between items-center py-3">
+                <div class="flex-shrink-0">
+                    <img src="../Assest/images/mlogo.svg" alt="Logo" class="h-8 sm:h-10" />
+                </div>
+
+                <nav class="hidden xl:flex flex-1 justify-center space-x-6">
+                    <div class="flex justify-center mt-2">
+                        <div class="inline-flex rounded-lg shadow-md bg-white overflow-hidden">
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-semibold text-white bg-blue-900 hover:bg-[rgb(220,228,245)] hover:text-pak-green transition duration-300 flex items-center">
+                                ALL
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-semibold text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                NEW
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-semibold text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                USED
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-semibold text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                RENT
+                            </a>
+                            <a href="#"
+                                class="px-8 py-3 text-sm font-semibold text-pak-green hover:bg-[rgb(220,228,245)] transition duration-300 flex items-center">
+                                Exchange
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="hidden xl:flex flex-shrink-0 items-center space-x-3">
+                    <button onclick="openModal()"
+                        class="h-9 border border-[#0C3168] ps-3 pe-3 hover:bg-[rgb(220,228,245)] text-[#0C3168] text-sm font-semibold rounded-lg flex items-center justify-center">
+                        Sell Your Service
+                    </button>
+                    <button onclick="openModal()"
+                        class="h-9 bg-[#0C3168] text-white text-sm font-semibold rounded-lg flex items-center justify-center hover:bg-opacity-90 px-4">
+                        Post Free Adds
+                    </button>
+                </div>
+
+                <button id="mobileMenuToggle"
+                    class="block xl:hidden text-gray-700 hover:text-primary-green focus:outline-none"
+                    aria-label="Toggle menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-white shadow-sm fixed top-[72px] z-40 w-full hidden xl:block">
+        <div class="mx-2 2xl:mx-20 sm:px-6">
+            <div class="flex py-2 items-center">
+                <div class="flex items-center gap-9 flex-1">
+                    <div class="relative">
+                        <button onclick="toggleDropdown('dropdown1')"
+                            class="flex items-center gap-1 font-semibold text-[#0C3168] hover:text-[#EA9D39]">
+                            Mobile Phones
+                        </button>
+                        <div id="dropdown1"
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-50 hidden">
+                            <ul class="py-2 text-sm text-[#0C3168] font-medium">
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">iPhone</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Vivo</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Tecno</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Infinix</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Oppo</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button onclick="toggleDropdown('dropdown2')"
+                            class="flex items-center gap-1 font-semibold text-[#0C3168] hover:text-[#EA9D39] transition">
+                            Vehicles
+                        </button>
+                        <div id="dropdown2"
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-50 hidden">
+                            <ul class="py-2 text-sm text-[#0C3168] font-medium">
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Cars</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Bikes</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Trucks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <button onclick="toggleDropdown('dropdown3')"
+                            class="flex items-center gap-1 font-semibold text-[#0C3168] hover:text-[#EA9D39] transition">
+                            Property
+                        </button>
+                        <div id="dropdown3"
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-[999] hidden">
+                            <ul class="py-2 text-sm text-[#0C3168] font-medium">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">For
+                                        Sale</a></li>
+                                <li><a href="#" class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">For
+                                        Rent</a></li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Commercial</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button onclick="toggleDropdown('dropdown4')"
+                            class="flex items-center gap-1 font-semibold text-[#0C3168] hover:text-[#EA9D39] transition">
+                            Electronics
+                        </button>
+                        <div id="dropdown4"
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-[999] hidden">
+                            <ul class="py-2 text-sm text-[#0C3168] font-medium">
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">TVs</a></li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Laptops</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Headphones</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button onclick="toggleDropdown('dropdown5')"
+                            class="flex items-center gap-1 font-semibold text-[#0C3168] hover:text-[#EA9D39] transition">
+                            Services
+                        </button>
+                        <div id="dropdown5"
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-[999] hidden">
+                            <ul class="py-2 text-sm text-[#0C3168] font-medium">
+                                <li><a href="#" class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Home
+                                        Repair</a></li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Tutoring</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Cleaning</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button onclick="toggleDropdown('dropdown6')"
+                            class="flex items-center gap-1 font-semibold text-[#0C3168] hover:text-[#EA9D39] transition">
+                            Jobs
+                        </button>
+                        <div id="dropdown6"
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-[999] hidden">
+                            <ul class="py-2 text-sm text-[#0C3168] font-medium">
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Full-Time</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Part-Time</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Remote</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button onclick="toggleDropdown('dropdown7')"
+                            class="flex items-center gap-1 font-semibold text-[#0C3168] hover:text-[#EA9D39] transition">
+                            Animals
+                        </button>
+                        <div id="dropdown7"
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-[999] hidden">
+                            <ul class="py-2 text-sm text-[#0C3168] font-medium">
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Dogs</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Cats</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Birds</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <button onclick="toggleDropdown('dropdown8')"
+                            class="flex items-center gap-1 font-semibold text-[#0C3168] hover:text-[#EA9D39] transition">
+                            Furniture
+                        </button>
+                        <div id="dropdown8"
+                            class="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded shadow-lg z-[999] hidden">
+                            <ul class="py-2 text-sm text-[#0C3168] font-medium">
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Sofas</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Beds</a>
+                                </li>
+                                <li><a href="#"
+                                        class="block px-4 py-2 hover:bg-[#EA9D39] hover:text-white rounded">Tables</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobileMenu"
+        class="fixed inset-0 bg-white z-[100] transform -translate-x-full transition-transform duration-300 xl:hidden overflow-y-auto">
+        <div class="p-4 flex flex-col h-full">
+            <div class="flex justify-end">
+                <button id="mobileMenuClose" class="text-gray-700 hover:text-primary-green p-2 focus:outline-none"
+                    aria-label="Close menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="my-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#" class="py-2 text-center text-sm font-semibold text-white bg-blue-900 rounded-lg">ALL</a>
+                    <a href="#"
+                        class="py-2 text-center text-sm font-semibold text-pak-green border border-pak-green rounded-lg">NEW</a>
+                    <a href="#"
+                        class="py-2 text-center text-sm font-semibold text-pak-green border border-pak-green rounded-lg">USED</a>
+                    <a href="#"
+                        class="py-2 text-center text-sm font-semibold text-pak-green border border-pak-green rounded-lg">RENT</a>
+                    <a href="#"
+                        class="py-2 text-center text-sm font-semibold text-pak-green border border-pak-green rounded-lg">Exchange</a>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <nav class="flex flex-col space-y-4 text-gray-700">
+                <div class="relative">
+                    <button onclick="toggleDropdown('mobile-dropdown1')"
+                        class="w-full text-left py-2 font-semibold">Mobile Phones</button>
+                    <div id="mobile-dropdown1" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">iPhone</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Vivo</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Tecno</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Infinix</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Oppo</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button onclick="toggleDropdown('mobile-dropdown2')"
+                        class="w-full text-left py-2 font-semibold">Vehicles</button>
+                    <div id="mobile-dropdown2" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Cars</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Bikes</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Trucks</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button onclick="toggleDropdown('mobile-dropdown3')"
+                        class="w-full text-left py-2 font-semibold">Property</button>
+                    <div id="mobile-dropdown3" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">For Sale</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">For Rent</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Commercial</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button onclick="toggleDropdown('mobile-dropdown4')"
+                        class="w-full text-left py-2 font-semibold">Electronics</button>
+                    <div id="mobile-dropdown4" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">TVs</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Laptops</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Headphones</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button onclick="toggleDropdown('mobile-dropdown5')"
+                        class="w-full text-left py-2 font-semibold">Services</button>
+                    <div id="mobile-dropdown5" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Home Repair</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Tutoring</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Cleaning</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button onclick="toggleDropdown('mobile-dropdown6')"
+                        class="w-full text-left py-2 font-semibold">Jobs</button>
+                    <div id="mobile-dropdown6" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Full-Time</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Part-Time</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Remote</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button onclick="toggleDropdown('mobile-dropdown7')"
+                        class="w-full text-left py-2 font-semibold">Animals</button>
+                    <div id="mobile-dropdown7" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Dogs</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Cats</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Birds</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <button onclick="toggleDropdown('mobile-dropdown8')"
+                        class="w-full text-left py-2 font-semibold">Furniture</button>
+                    <div id="mobile-dropdown8" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Sofas</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Beds</a>
+                        <a href="#" class="block py-1 hover:text-[#EA9D39]">Tables</a>
+                    </div>
+                </div>
+            </nav>
+
+            <hr class="my-4">
+
+            <div class="flex flex-col space-y-2 mt-auto">
+                <button onclick="openModal()"
+                    class="w-full py-2 border border-[#0C3168] text-[#0C3168] text-sm font-semibold rounded-lg">
+                    Sell Your Service
+                </button>
+                <button onclick="openModal()"
+                    class="w-full py-2 bg-[#0C3168] text-white text-sm font-semibold rounded-lg">
+                    Post Free Adds
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Main function to toggle the mobile menu visibility
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('-translate-x-full');
+        }
+
+        // Function to toggle category dropdowns
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            // Close all other dropdowns
+            document.querySelectorAll('[id^="dropdown"], [id^="mobile-dropdown"]').forEach(el => {
+                if (el.id !== id) {
+                    el.classList.add('hidden');
+                }
+            });
+            // Toggle the clicked one
+            dropdown.classList.toggle('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+            }
+
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', toggleMobileMenu);
+            }
+        });
+
+        // Example for openModal, replace with your actual function
+        function openModal() {
+            alert('Opening a modal...');
+        }
+
+    </script>
+</body>
+
+</html>
