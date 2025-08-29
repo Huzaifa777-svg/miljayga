@@ -104,7 +104,7 @@
 
             <div class="mb-6">
 
-                <label class="block text-gray-700 font-medium mb-2">Category</label>
+                <label class="block text-blue-900 font-medium mb-2">Category</label>
                 <div class="relative w-full max-w-full">
 
                     <input type="text" placeholder="Select Category" readonly
@@ -115,48 +115,40 @@
             </div>
 
             <div class="mb-6">
-                <label class="block text-gray-700 font-medium mb-2">Upload Images*</label>
-                <div class="flex flex-wrap gap-4 items-center">
-                    <label for="file-upload" class="cursor-pointer">
-                        <div
-                            class="w-20 h-20 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-400 text-3xl hover:border-blue-500 hover:text-blue-500 transition-colors">
-                            +
-                        </div>
-                        <input id="file-upload" type="file" class="hidden" multiple accept="image/*">
-                    </label>
-
-                    <div class="relative w-20 h-20">
-                        <div
-                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
-                            <i class="fa-solid fa-camera text-xl"></i>
-                        </div>
+                <label class="block text-blue-900 font-medium mb-2">Upload Images</label>
+                <div class="flex flex-wrap gap-2">
+                    <div
+                        class="w-12 h-12 flex items-center justify-center border border-dashed border-gray-400 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors shadow-sm">
+                        <i class="fa-solid fa-plus text-gray-500 text-lg"></i>
                     </div>
-                    <div class="relative w-20 h-20">
-                        <div
-                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
-                            <i class="fa-solid fa-camera text-xl"></i>
-                        </div>
+                    <div
+                        class="w-12 h-12 border border-gray-300 rounded-lg flex items-center justify-center text-gray-400 shadow-sm">
+                        <i class="fa-solid fa-camera-retro text-base"></i>
                     </div>
-                    <div class="relative w-20 h-20">
-                        <div
-                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
-                            <i class="fa-solid fa-camera text-xl"></i>
-                        </div>
+                    <div
+                        class="w-12 h-12 border border-gray-300 rounded-lg flex items-center justify-center text-gray-400 shadow-sm">
+                        <i class="fa-solid fa-camera-retro text-base"></i>
                     </div>
-                    <div class="relative w-20 h-20">
-                        <div
-                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
-                            <i class="fa-solid fa-camera text-xl"></i>
-                        </div>
+                    <div
+                        class="w-12 h-12 border border-gray-300 rounded-lg flex items-center justify-center text-gray-400 hidden sm:flex shadow-sm">
+                        <i class="fa-solid fa-camera-retro text-base"></i>
                     </div>
-                    <div class="relative w-20 h-20">
-                        <div
-                            class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-400">
-                            <i class="fa-solid fa-camera text-xl"></i>
-                        </div>
+                    <div
+                        class="w-12 h-12 border border-gray-300 rounded-lg flex items-center justify-center text-gray-400 hidden sm:flex shadow-sm">
+                        <i class="fa-solid fa-camera-retro text-base"></i>
+                    </div>
+                    <div
+                        class="w-12 h-12 border border-gray-300 rounded-lg flex items-center justify-center text-gray-400 hidden md:flex shadow-sm">
+                        <i class="fa-solid fa-camera-retro text-base"></i>
+                    </div>
+                    <div
+                        class="w-12 h-12 border border-gray-300 rounded-lg flex items-center justify-center text-gray-400 hidden md:flex shadow-sm">
+                        <i class="fa-solid fa-camera-retro text-base"></i>
                     </div>
                 </div>
-                <p class="text-sm text-gray-500 mt-2">For the cover picture we recommend using the landscape mode</p>
+                <p class="text-sm text-orange-500 mt-1">
+                    For the cover picture we recommend using the landscape mode
+                </p>
             </div>
 
 
@@ -165,7 +157,7 @@
             <form class="space-y-6">
 
                 <div>
-                    <label for="brands" class="block text-gray-700 font-medium mb-2">Brands*</label>
+                    <label for="brands" class="block text-blue-900 font-medium mb-2">Brands*</label>
                     <div class="relative">
                         <div
                             class="flex items-center w-full py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white cursor-pointer">
@@ -183,7 +175,7 @@
                 </div>
 
                 <div>
-                    <label for="condition" class="block text-gray-700 font-medium mb-2">Condition*</label>
+                    <label for="condition" class="block text-blue-900 font-medium mb-2">Condition*</label>
                     <div class="relative">
                         <div
                             class="flex items-center w-full py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white cursor-pointer">
@@ -201,25 +193,26 @@
                 <hr class="my-6 border-gray-300">
 
                 <div>
-                    <label for="ad-title" class="block text-gray-700 font-medium mb-2">Ad title*</label>
+                    <label for="ad-title" class="block text-blue-900 font-medium mb-2">Ad title*</label>
                     <input type="text" id="ad-title"
                         class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Maintain the key features of your item (e.g. brand, model, age, type)">
-                    <p class="text-sm text-gray-500 mt-1">Mention the key features of your item (e.g. brand, model, age,
+                    <p class="text-sm text-orange-500 mt-1">Mention the key features of your item (e.g. brand, model,
+                        age,
                         type)</p>
                 </div>
 
                 <div>
-                    <label for="description" class="block text-gray-700 font-medium mb-2">Description*</label>
+                    <label for="description" class="block text-blue-900 font-medium mb-2">Description*</label>
                     <textarea id="description" rows="4"
                         class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Describe the item you're selling"></textarea>
-                    <p class="text-sm text-gray-500 mt-1">Description should contain at least 10 alphabets/characters,
+                    <p class="text-sm text-orange-500 mt-1">Description should contain at least 10 alphabets/characters,
                         please add less than 2400 characters</p>
                 </div>
 
                 <div>
-                    <label for="location" class="block text-gray-700 font-medium mb-2">Location*</label>
+                    <label for="location" class="block text-blue-900 font-medium mb-2">Location*</label>
                     <div class="relative">
                         <div
                             class="flex items-center w-full py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white cursor-pointer">
@@ -238,7 +231,7 @@
                 <hr class="my-6 border-gray-300">
 
                 <div>
-                    <label for="price" class="block text-gray-700 font-medium mb-2">Price*</label>
+                    <label for="price" class="block text-blue-900 font-medium mb-2">Price*</label>
                     <div class="flex items-center space-x-2 mb-4">
                         <input type="text" placeholder="RS | Enter Price"
                             class="w-full p-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -260,19 +253,19 @@
                 <hr class="my-6 border-gray-300">
 
                 <div>
-                    <label for="name" class="block text-gray-700 font-medium mb-2">Name*</label>
+                    <label for="name" class="block text-blue-900 font-medium mb-2">Name*</label>
                     <input type="text" id="name"
                         class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="Name">
                 </div>
 
                 <div>
-                    <label for="phone-number" class="block text-gray-700 font-medium mb-2">Phone Number*</label>
+                    <label for="phone-number" class="block text-blue-900 font-medium mb-2">Phone Number*</label>
                     <input type="text" id="phone-number"
                         class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         placeholder="92 | Enter Phone Number">
                     <div class="flex justify-between items-center mt-6">
-                        <span class="text-gray-700 text-sm">Show my Phone number in ads.</span>
+                        <span class="text-orange-600 text-sm">Show my Phone number in ads.</span>
                         <label for="toggle-switch" class="relative inline-block w-10 h-6">
                             <input type="checkbox" id="toggle-switch" class="hidden peer toggle-switch-input">
                             <span
@@ -287,7 +280,7 @@
                 </div>
 
                 <hr class="my-6 border-gray-300">
-                <p>Do you want your product sell fast ?</p>
+                <p class="text-blue-900">Do you want your product sell fast ?</p>
                 <div
                     class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
                     <div class="flex flex-wrap justify-center sm:justify-start gap-4">
@@ -295,29 +288,29 @@
                             <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mb-1">
                                 <img src="../Assest/images/verfieds.svg" alt="">
                             </div>
-                            <span class="text-xs text-gray-600">Verified</span>
+                            <span class="text-xs text-orange-600">Verified</span>
                         </div>
                         <div class="flex items-center flex-col text-center">
                             <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mb-1">
                                 <img src="../Assest/images/inspected.svg" alt="">
                             </div>
-                            <span class="text-xs text-gray-600">Inspected</span>
+                            <span class="text-xs text-orange-600">Inspected</span>
                         </div>
                         <div class="flex items-center flex-col text-center">
                             <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mb-1">
                                 <img src="../Assest/images/trusted.svg" alt="">
                             </div>
-                            <span class="text-xs text-gray-600">Trusted</span>
+                            <span class="text-xs text-orange-600">Trusted</span>
                         </div>
                         <div class="flex items-center flex-col text-center">
                             <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mb-1">
                                 <img src="../Assest/images/featured.svg" alt="">
                             </div>
-                            <span class="text-xs text-gray-600">Featured</span>
+                            <span class="text-xs text-orange-600">Featured</span>
                         </div>
                     </div>
                     <button type="submit"
-                        class="bg-blue-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-colors w-full sm:w-auto mt-4 sm:mt-0">Post
+                        class="bg-blue-900 text-white font-bold py-2 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition-colors w-full sm:w-auto mt-4 sm:mt-0">Post
                         Now</button>
                 </div>
             </form>
@@ -325,7 +318,7 @@
 
         <div class="w-full lg:w-1/3">
             <div class="bg-white rounded-lg shadow-lg p-6">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">Need help getting started?</h3>
+                <h3 class="text-xl font-bold text-blue-900 mb-4">Need help getting started?</h3>
                 <p class="text-gray-600 mb-4">
                     Review these resources to learn how to create a great ad and increase your selling chances
                 </p>

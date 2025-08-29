@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Progress Steps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .step {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 3rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #4b5563;
+            background-color: #e5e7eb;
+            transition: background-color 0.3s, color 0.3s;
+            clip-path: polygon(0% 0%, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 0% 100%, 15px 50%);
+            padding: 0 2rem;
+            /* 👈 equal padding */
+            margin-right: -14px;
+            white-space: nowrap;
+        }
+
+        .step:first-child {
+            clip-path: polygon(0% 0%, calc(100% - 15px) 0%, 100% 50%, calc(100% - 15px) 100%, 0% 100%);
+        }
+
+        .step:last-child {
+            margin-right: 0;
+        }
+
+        .step-active {
+            color: white;
+            background-color: #1e3a8a;
+            z-index: 10;
+        }
+
+        /* 📱 Mobile view */
+        @media (max-width: 768px) {
+            .step {
+                font-size: 0.75rem;
+                /* text chhota */
+                padding: 0 1.2rem;
+                /* dono taraf equal padding */
+                height: 2.5rem;
+                /* thoda chhota box */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex items-center justify-center mt-8 gap-1 steps-container overflow-x-auto px-2">
+        <div class="step step-active">ALL</div>
+        <div class="step">NEW</div>
+        <div class="step">USED</div>
+        <div class="step">RENT</div>
+        <div class="step">EXCHANGE</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stepsContainer = document.querySelector('.steps-container');
+            const steps = document.querySelectorAll('.step');
+
+            stepsContainer.addEventListener('click', (e) => {
+                const clickedStep = e.target.closest('.step');
+                if (!clickedStep) return;
+
+                steps.forEach(step => step.classList.remove('step-active'));
+                clickedStep.classList.add('step-active');
+            });
+        });
+    </script>
+</body>
+
+</html>

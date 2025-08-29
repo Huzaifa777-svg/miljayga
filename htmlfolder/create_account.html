@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body class="bg-gray-100 p-4">
+    <div class="flex items-center justify-center">
+        <div class="w-full max-w-sm">
+            <div class="text-center mb-3">
+                <img src="../Assest/images/mlogo.svg" alt="Logo" class="w-32 h-auto mx-auto">
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold text-center mb-1 text-blue-900">Create a new account</h2>
+                <p class="text-gray-500 text-center mb-3 text-sm">It's quick and easy.</p>
+                <hr class="mb-3">
+
+                <form>
+                    <!-- First / Last Name -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
+                        <input type="text" placeholder="First name"
+                            class="p-2 border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-blue-500">
+                        <input type="text" placeholder="Surname"
+                            class="p-2 border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-blue-500">
+                    </div>
+
+                    <!-- Email -->
+                    <input type="email" placeholder="Mobile number or email address"
+                        class="w-full p-2 mb-3 border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-blue-500">
+                    <input type="password" placeholder="New password"
+                        class="w-full p-2 mb-3 border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-blue-500">
+
+                    <!-- Date of birth -->
+                    <div class="mb-3">
+                        <label class="block text-xs text-gray-600 mb-1">Date of birth
+                            <span class="text-gray-400"><i class="fa-solid fa-circle-question"></i></span>
+                        </label>
+
+                        <div class="grid grid-cols-3 gap-2">
+                            <!-- Day -->
+                            <div class="relative" id="dayBox">
+                                <button id="dayBtn"
+                                    class="w-full p-2 border border-gray-300 rounded-md bg-white text-sm flex justify-between items-center hover:border-blue-500">
+                                    Day <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="dayOptions"
+                                    class="absolute top-full left-0 w-full max-h-40 overflow-y-auto bg-white border border-gray-300 rounded-md shadow-lg hidden z-50">
+                                </div>
+                            </div>
+
+                            <!-- Month -->
+                            <div class="relative" id="monthBox">
+                                <button id="monthBtn"
+                                    class="w-full p-2 border border-gray-300 rounded-md bg-white text-sm flex justify-between items-center hover:border-blue-500">
+                                    Month <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="monthOptions"
+                                    class="absolute top-full left-0 w-full max-h-40 overflow-y-auto bg-white border border-gray-300 rounded-md shadow-lg hidden z-50">
+                                    <div data-value="1" class="p-2 hover:bg-gray-100 cursor-pointer">Jan</div>
+                                    <div data-value="2" class="p-2 hover:bg-gray-100 cursor-pointer">Feb</div>
+                                    <div data-value="3" class="p-2 hover:bg-gray-100 cursor-pointer">Mar</div>
+                                    <div data-value="4" class="p-2 hover:bg-gray-100 cursor-pointer">Apr</div>
+                                    <div data-value="5" class="p-2 hover:bg-gray-100 cursor-pointer">May</div>
+                                    <div data-value="6" class="p-2 hover:bg-gray-100 cursor-pointer">Jun</div>
+                                    <div data-value="7" class="p-2 hover:bg-gray-100 cursor-pointer">Jul</div>
+                                    <div data-value="8" class="p-2 hover:bg-gray-100 cursor-pointer">Aug</div>
+                                    <div data-value="9" class="p-2 hover:bg-gray-100 cursor-pointer">Sep</div>
+                                    <div data-value="10" class="p-2 hover:bg-gray-100 cursor-pointer">Oct</div>
+                                    <div data-value="11" class="p-2 hover:bg-gray-100 cursor-pointer">Nov</div>
+                                    <div data-value="12" class="p-2 hover:bg-gray-100 cursor-pointer">Dec</div>
+                                </div>
+                            </div>
+
+                            <!-- Year -->
+                            <div class="relative" id="yearBox">
+                                <button id="yearBtn"
+                                    class="w-full p-2 border border-gray-300 rounded-md bg-white text-sm flex justify-between items-center hover:border-blue-500">
+                                    Year <i class="fa-solid fa-chevron-down"></i>
+                                </button>
+                                <div id="yearOptions"
+                                    class="absolute top-full left-0 w-full max-h-40 overflow-y-auto bg-white border border-gray-300 rounded-md shadow-lg hidden z-50">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="mb-3">
+                        <label class="block text-xs text-gray-600 mb-1">Gender
+                            <span class="text-gray-400"><i class="fa-solid fa-circle-question"></i></span>
+                        </label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="relative flex items-center p-2 border rounded-md">
+                                <label for="female" class="flex-1 cursor-pointer text-sm">Female</label>
+                                <input type="radio" id="female" name="gender" class="ml-2 text-blue-500">
+                            </div>
+                            <div class="relative flex items-center p-2 border rounded-md">
+                                <label for="male" class="flex-1 cursor-pointer text-sm">Male</label>
+                                <input type="radio" id="male" name="gender" class="ml-2 text-blue-500">
+                            </div>
+                            <div class="relative flex items-center p-2 border rounded-md">
+                                <label for="custom" class="flex-1 cursor-pointer text-sm">Custom</label>
+                                <input type="radio" id="custom" name="gender" class="ml-2 text-blue-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-[10px] text-gray-500 mb-3">People who use our service may have uploaded your contact
+                        information to Facebook. <a href="#" class="text-blue-600 hover:underline">Learn more.</a></p>
+                    <p class="text-[10px] text-gray-500 mb-4">By clicking Sign Up, you agree to our <a href="#"
+                            class="text-blue-600 hover:underline">Terms</a>, <a href="#"
+                            class="text-blue-600 hover:underline">Privacy Policy</a> and <a href="#"
+                            class="text-blue-600 hover:underline">Cookies Policy</a>. You may receive SMS notifications
+                        from us and can opt out at any time.</p>
+
+                    <div class="text-center mb-3">
+                        <button class="text-sm bg-blue-900 text-white hover:bg-blue-600 rounded-md w-[80px] py-1.5">Sign
+                            Up</button>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#" class="text-blue-600 hover:underline text-sm">Already have an account?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fill Day Options
+        const dayOptions = document.getElementById("dayOptions");
+        for (let i = 1; i <= 31; i++) {
+            const div = document.createElement("div");
+            div.textContent = i.toString().padStart(2, "0");
+            div.dataset.value = i;
+            div.className = "p-2 hover:bg-gray-100 cursor-pointer";
+            dayOptions.appendChild(div);
+        }
+
+        // Fill Year Options
+        const yearOptions = document.getElementById("yearOptions");
+        const currentYear = new Date().getFullYear();
+        for (let i = currentYear; i >= 1900; i--) {
+            const div = document.createElement("div");
+            div.textContent = i;
+            div.dataset.value = i;
+            div.className = "p-2 hover:bg-gray-100 cursor-pointer";
+            yearOptions.appendChild(div);
+        }
+
+        // Function to activate dropdown
+        function setupCustomSelect(boxId, btnId, optionsId) {
+            const box = document.getElementById(boxId);
+            const btn = document.getElementById(btnId);
+            const options = document.getElementById(optionsId);
+
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                options.classList.toggle("hidden");
+            });
+
+            options.addEventListener("click", (e) => {
+                if (e.target.dataset.value) {
+                    btn.innerHTML = e.target.textContent + ' <i class="fa-solid fa-chevron-down"></i>';
+                    options.classList.add("hidden");
+                }
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!box.contains(e.target)) {
+                    options.classList.add("hidden");
+                }
+            });
+        }
+
+        setupCustomSelect("dayBox", "dayBtn", "dayOptions");
+        setupCustomSelect("monthBox", "monthBtn", "monthOptions");
+        setupCustomSelect("yearBox", "yearBtn", "yearOptions");
+    </script>
+</body>
+
+</html>
